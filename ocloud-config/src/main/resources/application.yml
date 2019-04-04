@@ -17,8 +17,8 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: 47.107.37.185:9092
-          zk-nodes: 47.107.37.185:2181
+          brokers: localhost:9092
+          zk-nodes: localhost:2181
           zk-connection-timeout: 60000
     bus:
       destination: config
