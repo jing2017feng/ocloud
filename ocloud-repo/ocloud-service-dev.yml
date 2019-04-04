@@ -1,9 +1,9 @@
-publickey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMuBx22kyVjtkwQqCph8j3Ki/4nrCZ4Qh+oYVSppINBsHbNzFIEJundQejj57MwKwiWh/i6Y1mma7nqU4Ar32X8CAwEAAQ==
+publickey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIvq0J/qt2cVhqAZb1c5VM5MTgJKp7HPgG2ycT9MFSTkResRLLxyTYugNwAZpHdEwuwgyL9uMl5pWOmyAQ9oWpcCAwEAAQ==
 spring:
   datasource:
-    url: jdbc:mysql://47.107.37.185:3306/ocloud?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=CONVERT_TO_NULL&autoReconnect=true&useSSL=false&serverTimezone=GMT%2b8
+    url: jdbc:mysql://my.ocloudwork.com:3306/ocloud?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=CONVERT_TO_NULL&autoReconnect=true&useSSL=false&serverTimezone=GMT%2b8
     username: root
-    password: dfz6wn0VfjvBKaGH9hdT2T+6PJl0XBR+d9HBvY1piKeP6k+M26JAzaPzq8DUbBhr74xdtzKlrzsnCSxGB5pjTA==
+    password: ifccmypnXEnC443nI8avnsyaZobDohG+4MlocmGX6baVVQlAlNO1gVezJ4vDP3dHI4pomUaAc5RcsPZN8iqU/w==
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     initialSize: 5
