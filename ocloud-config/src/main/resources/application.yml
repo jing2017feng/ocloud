@@ -9,7 +9,7 @@ spring:
     config:
       server:
         git:
-          search-paths: ocloud/ocloud-repo
+          search-paths: ocloud-repo
           uri: https://github.com/jing2017feng/ocloud.git
           username: jing2008feng@163.com
           password: ming2018feng
