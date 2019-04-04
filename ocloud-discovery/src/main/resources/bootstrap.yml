@@ -2,7 +2,7 @@ server:
   port: 8761
 spring:
   application:
-    name: ocloud-discovery
+    name: discovery
   cloud:
     config:
       enabled: true
