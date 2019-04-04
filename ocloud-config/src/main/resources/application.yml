@@ -1,0 +1,28 @@
+server:
+  port: 8771
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        git:
+          search-paths: ocloud/ocloud-repo
+          uri: https://github.com/jing2017feng/ocloud.git
+          username: jing2008feng@163.com
+          password: ming2018feng
+          default-label: master
+    stream:
+      kafka:
+        binder:
+          brokers: 47.107.37.185:9092
+          zk-nodes: 47.107.37.185:2181
+          zk-connection-timeout: 60000
+    bus:
+      destination: config
+logging:
+  file: /log/ocloud-config.log
+  level:
+    root: INFO   

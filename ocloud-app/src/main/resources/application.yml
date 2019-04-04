@@ -1,0 +1,19 @@
+info: 
+  app: 
+    name: ${spring.application.name}
+    version: v1
+logging:
+  level:
+    root: INFO
+  file: /tmp/logs/ocloud-app.log
+#  pattern:
+#    level: "%clr(%5p) %clr([${spring.application.name:},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-}]){yellow}"
+spring:
+  mvc:
+    async:
+      request-timeout: 15000
+  thymeleaf:
+    cache: false
+eureka:
+  instance:
+    prefer-ip-address: true

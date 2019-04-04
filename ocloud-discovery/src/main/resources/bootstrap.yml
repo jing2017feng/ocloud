@@ -1,0 +1,18 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: ocloud-discovery
+  cloud:
+    config:
+      enabled: true
+      profile: dev
+      uri: http://localhost:8771/
+      label: master
+    stream:
+      kafka:
+        binder:
+          brokers: 47.107.37.185:9092
+          zk-nodes: 47.107.37.185:2181
+    bus:
+       destination: config

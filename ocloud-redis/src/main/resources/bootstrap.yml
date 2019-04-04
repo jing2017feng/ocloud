@@ -1,0 +1,10 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: ocloud-redis
+  cloud:
+    config:
+      enabled: true
+      profile: dev
+      uri: http://localhost:8771/

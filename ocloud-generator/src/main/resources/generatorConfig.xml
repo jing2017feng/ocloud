@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" 
+"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <!-- https://www.jianshu.com/p/e09d2370b796 -->
+	<context id="prod">
+		<!-- RowBounds pagination -->
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		<plugin	type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<!-- jdbc连接 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://47.107.37.185:3306/ocloud?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;useSSL=false"
+			userId="root" password="jingfeng" />
+		<!--
+		<jdbcConnection driverClass="${spring.datasource.driverClassName}"
+            connectionURL="${spring.datasource.url}"
+            userId="${spring.datasource.username}" password="${spring.datasource.password}" />-->
+
+		<javaModelGenerator
+			targetPackage="com.ocloudwork.cloud.service.domain"
+			targetProject="src/main/java">
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="mappers"
+			targetProject="src/main/java" />
+		<javaClientGenerator
+			targetPackage="com.ocloudwork.cloud.service.dao"
+			targetProject="src/main/java" type="XMLMAPPER" />
+
+		<table tableName="user_info" domainObjectName="UserInfo">
+		</table>
+
+	</context>
+</generatorConfiguration>
