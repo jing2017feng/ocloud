@@ -3,8 +3,6 @@ package com.ocloudwork.cloud.app;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
@@ -32,7 +30,6 @@ import org.springframework.web.client.RestTemplate;
 @EnableRedisHttpSession
 @EnableScheduling
 public class CloudAppApplication {
-	private static Logger log = LoggerFactory.getLogger(CloudAppApplication.class);
 
 	/**
 	 * 定义restful接口调用模板对象
@@ -64,7 +61,6 @@ public class CloudAppApplication {
 	 */
 	public static void main(String[] args) {
 		SpringApplication.run(CloudAppApplication.class, args);
-		log.info("config server startup OK!");
 	}
 
 }
