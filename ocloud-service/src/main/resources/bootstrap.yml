@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: ocloud-service
+  main:
+    allow-bean-definition-overriding: true
   cloud:
     config:
       enabled: true

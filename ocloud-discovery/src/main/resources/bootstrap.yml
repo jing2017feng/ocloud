@@ -8,13 +8,7 @@ spring:
       enabled: true
       profile: dev
       uri: http://localhost:8771/
-    stream:
-      kafka:
-        binder:
-          brokers: localhost:9092
-          zk-nodes: localhost:2181
-    bus:
-       destination: config
-eureka:
-  instance:
-    instance-id: ${spring.application.name}:${random.value}
+  security:
+    user:
+      name: jingfeng
+      password: minghui

@@ -9,10 +9,23 @@ spring:
       profile: dev
       uri: http://localhost:8771/
     stream:
+      default-binder: kafka
+      bindings:
+        sleuth:
+          destination: sleuth_dev
+        logs: 
+          group: log-group
+          destination: log_stream
+          consumer:
+            concurrency: 1
+            partitioned: false
       kafka:
         binder:
-          brokers: localhost:9092
-          zk-nodes: localhost:2181
+          brokers: my.ocloudwork.com:9092
+          zk-nodes: my.ocloudwork.com:2181
+          auto-create-topics: true
+          auto-add-partitions: true
+          min-partition-count: 1
     bus:
       destination: config
   redis:
@@ -25,20 +38,12 @@ spring:
         #- 47.94.174.38:7004
         #- 47.94.174.38:7005
       #max-redirects: 3
-      host: localhost
+      host: my.ocloudwork.com
       port: 6379
       database: 0
       timeout: 3000
-      pool:
-        max-active: 10
-        max-idle: 10
-        min-idle: 2
-        max-wait: 2000
   session:
     store-type: redis
-  sleuth:
-    sampler:
-      percentage: 1.0
 endpoints:
   restart:
     enabled: true
