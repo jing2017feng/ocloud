@@ -4,3 +4,9 @@ logging:
   file: /log/ocloud-config.log
   level:
     root: INFO
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://jingfeng:minghui@localhost:8761/eureka/
+  instance:
+    appname: ocloud-service
