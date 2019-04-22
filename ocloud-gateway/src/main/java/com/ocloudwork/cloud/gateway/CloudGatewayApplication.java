@@ -18,16 +18,18 @@ public class CloudGatewayApplication {
 		SpringApplication.run(CloudGatewayApplication.class, args);
 	}
 
-	@Bean
-	public AccessFilter accessFilter() {
-		return new AccessFilter();
-	}
+//	@Bean
+//	public AccessFilter accessFilter() {
+//		return new AccessFilter();
+//	}
 	
 	//a serviceId "myusers-v1" will be mapped to route "/v1/myusers/**"
+	/**
 	@Bean
 	public PatternServiceRouteMapper serviceRouteMapper() {
 	    return new PatternServiceRouteMapper(
 	        "(?<name>^.+)-(?<version>v.+$)",
 	        "${version}/${name}");
 	}
+	*/
 }

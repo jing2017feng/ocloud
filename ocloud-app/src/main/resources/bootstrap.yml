@@ -1,5 +1,3 @@
-server:
-  port: 7050
 spring:
   application:
     name: ocloud-app
@@ -8,37 +6,4 @@ spring:
       enabled: true
       profile: dev
       uri: http://localhost:8771/
-    stream:
-      kafka:
-        binder:
-          brokers: localhost:9092
-          zk-nodes: localhost:2181
-    bus:
-      destination: config
-  redis:
-    #cluster:
-      #nodes:
-        #- 47.94.174.38:7000
-        #- 47.94.174.38:7001
-        #- 47.94.174.38:7002
-        #- 47.94.174.38:7003
-        #- 47.94.174.38:7004
-        #- 47.94.174.38:7005
-      #max-redirects: 3
-      host: localhost
-      port: 6379
-      database: 0
-      timeout: 3000
-      pool:
-        max-active: 10
-        max-idle: 10
-        min-idle: 2
-        max-wait: 2000
-  session:
-    store-type: redis
-  sleuth:
-    sampler:
-      percentage: 1.0
-endpoints:
-  restart:
-    enabled: true
+      label: dalston.sr5

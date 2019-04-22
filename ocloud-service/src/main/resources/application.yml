@@ -1,3 +1,5 @@
+server:
+  port: 7030
 spring:
   redis:
     #cluster:
