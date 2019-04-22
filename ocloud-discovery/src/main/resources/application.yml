@@ -1,6 +1,13 @@
-security:
-  basic:
-    enabled: true
-  user:
-    name: jingfeng
-    password: minghui
+server:
+  port: 8761
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+    bus:
+       destination: config

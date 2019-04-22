@@ -1,26 +1,16 @@
 server:
   port: 8771
-spring:
-  application:
-    name: configserver
-  cloud:
-    config:
-      server:
-        git:
-          search-paths: ocloud-repo
-          uri: https://github.com/jing2017feng/ocloud.git
-          username: jing2008feng@163.com
-          password: ming2015feng
-          default-label: master
-    stream:
-      kafka:
-        binder:
-          brokers: localhost:9092
-          zk-nodes: localhost:2181
-          zk-connection-timeout: 60000
-    bus:
-      destination: config
 logging:
   file: /log/ocloud-config.log
   level:
-    root: INFO   
+    root: INFO
+eureka:
+  client:
+    healthcheck:      enabled: true
+    serviceUrl:
+      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:8761}/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
