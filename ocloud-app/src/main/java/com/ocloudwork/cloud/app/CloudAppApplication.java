@@ -1,18 +1,13 @@
 package com.ocloudwork.cloud.app;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -27,7 +22,6 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
 @EnableCircuitBreaker
 @EnableHystrix
-@EnableRedisHttpSession
 @EnableScheduling
 public class CloudAppApplication {
 
@@ -39,20 +33,6 @@ public class CloudAppApplication {
 	@LoadBalanced
 	RestTemplate restTemplate() {
 		return new RestTemplate();
-	}
-
-	/**
-	 * 在servletcontext设置系统属性
-	 * @return
-	 */
-	@Bean
-	public ServletContextInitializer initializer() {
-		return new ServletContextInitializer() {
-			@Override
-			public void onStartup(ServletContext servletContext) throws ServletException {
-				servletContext.setAttribute("jsVer", "1.0");
-			}
-		};
 	}
 
 	/**

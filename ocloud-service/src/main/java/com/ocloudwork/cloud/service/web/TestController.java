@@ -2,7 +2,6 @@ package com.ocloudwork.cloud.service.web;
 
 import java.util.List;
 
-import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,20 +38,8 @@ public class TestController {
 	}
 
 	@RequestMapping("/getAllUsers")
-	public List<User> getAllUsers(HttpSession session) {
+	public List<User> getAllUsers() {
 		List<User> result = testService.getAllUsers();
-		ObjectMapper objectMapper = new ObjectMapper();
-
-		String jsonStr = null;
-		try {
-			jsonStr = objectMapper.writeValueAsString(result);
-		} catch (JsonProcessingException e) {
-			e.printStackTrace();
-		}
-		ServiceInstance instance = client.getLocalServiceInstance();
-		LoggerFactory.getLogger(TestController.class).info(session.getId());
-		logger.info("/getAllUsers, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:"
-				+ jsonStr);
 		return result;
 	}
 

@@ -2,8 +2,6 @@ package com.ocloudwork.cloud.app.web;
 
 
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,10 +17,7 @@ public class HtmlController {
     private TestService testService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public ModelAndView list(HttpSession session) {
-    	session.setAttribute("test", "赵辉");
-    	System.out.println("sessionId="+session.getId()+"赵明辉666");
-    	//查看：hkeys spring:session:sessions:9c0962b1-bd80-4079-9613-73d1bfc0135c
+    public ModelAndView list() {
         return new ModelAndView("list","users",testService.getAllUsers());
     }
 }
