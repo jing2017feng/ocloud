@@ -2,23 +2,36 @@ spring:
   application:
     name: configserver
   cloud:
-    config:
+    config:        #git方式配置
       server:
         git:
           search-paths: ocloud-repo
           uri: https://github.com/jing2017feng/ocloud.git
-          username: jing2008feng@163.com
-          password: ming2015feng
+          username: 
+          password: 
           default-label: finchley
 server:
   port: 8771
+#日志
 logging:
   file: /log/ocloud-config.log
   level:
     root: INFO
+#服务注册发现中心
 eureka:
   client:
     serviceUrl:
       defaultZone: http://jingfeng:minghui@localhost:8761/eureka/
   instance:
     appname: ocloud-config
+#健康监控
+management:
+  endpoints:
+    web:
+      exposure:
+        # 开放所有监控端点
+        include: '*'
+  endpoint:
+    health:
+      # 是否展示健康检查详情
+      show-details: always

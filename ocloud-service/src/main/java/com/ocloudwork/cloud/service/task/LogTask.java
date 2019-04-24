@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class LogTask {
 	private static Logger log=LoggerFactory.getLogger(LogTask.class);
-	@Scheduled(fixedRate=36000000)
+	//@Scheduled(fixedRate=36000000)
 	public void logTime(){
 		log.info(LocalDateTime.now().toString());
 	}

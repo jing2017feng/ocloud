@@ -1,28 +1,4 @@
-publickey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIvq0J/qt2cVhqAZb1c5VM5MTgJKp7HPgG2ycT9MFSTkResRLLxyTYugNwAZpHdEwuwgyL9uMl5pWOmyAQ9oWpcCAwEAAQ==
 spring:
-  datasource:
-    url: jdbc:mysql://my.ocloudwork.com:3306/ocloud?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=CONVERT_TO_NULL&autoReconnect=true&useSSL=false&serverTimezone=GMT%2b8
-    username: root
-    password: ifccmypnXEnC443nI8avnsyaZobDohG+4MlocmGX6baVVQlAlNO1gVezJ4vDP3dHI4pomUaAc5RcsPZN8iqU/w==
-    driver-class-name: com.mysql.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
-    initialSize: 5
-    minIdle: 5
-    maxActive: 20
-    maxWait: 60000
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: SELECT 1 FROM DUAL
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: true
-    maxPoolPreparedStatementPerConnectionSize: 20
-    filters: config,stat,wall,log4j
-    connectionProperties: config.decrypt=true;config.decrypt.key=${publickey};druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-    #useGlobalDataSourceStat: true
-    schema: classpath:db/schema.sql
-    data: classpath:db/data.sql
   jpa:
     hibernate:
       ddl-auto: update
