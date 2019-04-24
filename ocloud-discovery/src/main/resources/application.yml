@@ -1,11 +1,10 @@
 server:
   port: 8761
-security:
-  basic:
-    enabled: true
-  user:
-    name: jingfeng
-    password: minghui
+spring:
+  security:
+    user:
+      name: jingfeng
+      password: minghui
 eureka:
   instance:
     instance-id: ${spring.application.name}:${random.value}
