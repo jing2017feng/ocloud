@@ -8,7 +8,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://jingfeng:minghui@localhost:8761/eureka/
   # 服务端设置
   server:
     # 关闭自我保护，将出现故障的服务快速剔除
