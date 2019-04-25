@@ -23,7 +23,10 @@ eureka:
     serviceUrl:
       defaultZone: http://jingfeng:minghui@localhost:8761/eureka/
   instance:
+    hostname: ocloud-config
     appname: ocloud-config
+    metadata-map:
+      cluster: MAIN
 #健康监控
 management:
   endpoints:

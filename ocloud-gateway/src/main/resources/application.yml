@@ -10,6 +10,14 @@ management:
       show-details: always
 zuul:
   sensitive-headers: Cookie,Set-Cookie,Authorization
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://jingfeng:minghui@localhost:8761/eureka/
+  instance:
+    hostname: ocloud-gateway
+    metadata-map:
+      cluster: MAIN
 #  routes:
 #    api-a:
 #      path: /api-a/**

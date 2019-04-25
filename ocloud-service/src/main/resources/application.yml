@@ -9,6 +9,9 @@ spring:
   sleuth:
     sampler:
       probability: 1.0
+  jackson:
+    serialization:
+      indent-output: true
 logging:
   level:
     root: INFO
@@ -27,3 +30,11 @@ management:
     health:
       # 是否展示健康检查详情
       show-details: always
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://jingfeng:minghui@localhost:8761/eureka/
+  instance: 
+    hostname: ocloud-service
+    appname: ocloud-service
+    metadata-map:      cluster: MAIN

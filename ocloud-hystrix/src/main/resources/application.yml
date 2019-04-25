@@ -7,5 +7,5 @@ eureka:
 turbine:
   # 要监控的微服务列表，多个用,分隔
   appConfig: ocloud-service,ocloud-app
-  aggregator:    cluster-config:    - main
+  aggregator:    cluster-config:    - MAIN
   clusterNameExpression: "'default'"

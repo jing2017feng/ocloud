@@ -7,8 +7,14 @@ spring:
   thymeleaf:
     cache: false
 eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://jingfeng:minghui@localhost:8761/eureka/
   instance:
+    hostname: ocloud-app
     prefer-ip-address: true
+    metadata-map:
+      cluster: MAIN
 feign:
   hystrix:
     enabled: true
