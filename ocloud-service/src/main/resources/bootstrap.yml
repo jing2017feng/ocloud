@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: ocloud-service
-  cloud:
-    config:
-      enabled: true
-      profile: dev
-      uri: http://localhost:8771/
-      label: finchley

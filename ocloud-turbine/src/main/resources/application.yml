@@ -3,13 +3,8 @@ server:
 spring:
   application:
     name: ocloud-turbine
-eureka:
-  client:
-    service-url:
-      defaultZone: http://jingfeng:minghui@localhost:8761/eureka/
-  instance:
-    prefer-ip-address: true
-turbine:
-  # 要监控的微服务列表，多个用,分隔
-  appConfig: ocloud-service,ocloud-app
-  clusterNameExpression: "'default'"
+  cloud:
+    config:
+      enabled: true
+      uri: http://my.ocloudwork.com:8771/
+      name: ocloud-service

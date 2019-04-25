@@ -4,6 +4,4 @@ spring:
   cloud:
     config:
       enabled: true
-      profile: dev
-      uri: http://localhost:8771/
-      label: dalston.sr5
+      uri: http://my.ocloudwork.com:8771/

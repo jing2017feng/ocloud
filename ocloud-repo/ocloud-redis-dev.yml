@@ -1,6 +1,0 @@
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://jingfeng:minghui@localhost:8761/eureka/
-  instance:
-    appname: ocloud-redis
