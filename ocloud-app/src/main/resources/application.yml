@@ -12,7 +12,14 @@ eureka:
 feign:
   hystrix:
     enabled: true
-    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
 #ribbon负载均衡策略
 ocloud-service:
   ribbon:

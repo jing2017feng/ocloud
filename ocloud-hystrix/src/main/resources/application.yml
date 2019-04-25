@@ -4,3 +4,8 @@ eureka:
       defaultZone: http://jingfeng:minghui@localhost:8761/eureka/
   instance:
     prefer-ip-address: true
+turbine:
+  # 要监控的微服务列表，多个用,分隔
+  appConfig: ocloud-service,ocloud-app
+  aggregator:    cluster-config:    - main
+  clusterNameExpression: "'default'"
