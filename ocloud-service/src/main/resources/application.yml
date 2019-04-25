@@ -35,6 +35,6 @@ eureka:
     serviceUrl:
       defaultZone: http://jingfeng:minghui@localhost:8761/eureka/
   instance: 
-    hostname: ocloud-service
+    prefer-ip-address: true
     appname: ocloud-service
     metadata-map:      cluster: MAIN

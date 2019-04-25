@@ -20,7 +20,6 @@ eureka:
     # 当获取不到对应实例时，需要等待的时间，缺省 (1000*60*5)ms
     waitTimeInMsWhenSyncEmpty: 6000
   instance:
-    hostname: ocloud-discovery
     instance-id: ${spring.application.name}:${random.value}
     preferIpAddress: false
     metadata-map:
