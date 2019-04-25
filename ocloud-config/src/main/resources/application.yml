@@ -9,7 +9,7 @@ spring:
           uri: https://github.com/jing2017feng/ocloud.git
           username: 
           password: 
-          default-label: finchley
+          default-label: finchley.docker
 server:
   port: 8771
 #日志
