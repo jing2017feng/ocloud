@@ -1,16 +1,3 @@
-zuul:
-  sensitive-headers: Cookie,Set-Cookie,Authorization
-  routes:
-#    api-a:
-#      path: /api-a/**
-#      serviceId: ocloud-service
-    app:
-      path: /app/**
-      serviceId: ocloud-app
-#    api-url:
-#      path: /api/**
-#      url: forward:/home
-  
 eureka:
   client:
     serviceUrl:
