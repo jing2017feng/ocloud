@@ -7,4 +7,4 @@ spring:
       profile: dev
       uri: http://localhost:8771/
       name: ocloud-gateway
-      label: dalston.sr5
+      label: finchley
