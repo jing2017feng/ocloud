@@ -8,8 +8,6 @@ management:
   endpoint:
     health:
       show-details: always
-zuul:
-  sensitive-headers: Cookie,Set-Cookie,Authorization
 eureka:
   client:
     serviceUrl:
@@ -18,13 +16,14 @@ eureka:
     hostname: ocloud-gateway
     metadata-map:
       cluster: MAIN
-#  routes:
+zuul:
+  sensitive-headers: Cookie,Set-Cookie,Authorization  routes:
 #    api-a:
 #      path: /api-a/**
 #      serviceId: ocloud-service
-#    app:
-#      path: /app/**
-#      serviceId: ocloud-app
+    app:
+      path: /app/**
+      serviceId: ocloud-app
 #    api-url:
 #      path: /api/**
 #      url: forward:/home
