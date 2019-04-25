@@ -34,8 +34,8 @@
 		<module>ocloud-monitor</module>
 		<module>ocloud-service</module>
 		<module>ocloud-generator</module>
-		<module>ocloud-redis</module>
 		<module>ocloud-api</module>
+		<module>ocloud-turbine</module>
 	</modules>
 	<dependencies>
 		<dependency>
@@ -48,10 +48,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
