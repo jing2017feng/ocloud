@@ -6,23 +6,17 @@ import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.client.RestTemplate;
 
-/**
- * 
- * <p>Description: 服务启动类</p>  
- * <p>Copyright: Copyright (c) 2018</p>  
- * <p>Company: www.ocloudwork.com</p>  
- * @author minghui
- * @datetime 2018年8月17日-上午11:00:17
- */
+
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableCircuitBreaker
-@EnableHystrix
-@EnableScheduling
+//@EnableCircuitBreaker
+//@EnableHystrix
+@EnableFeignClients
 public class CloudAppApplication {
 
 	/**
