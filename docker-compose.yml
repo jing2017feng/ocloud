@@ -6,18 +6,29 @@ services:
       - "8771:8771"
   ocloud-discovery:
     image: ocloud/ocloud-discovery:1.0.0
+    external_links: 
+      - ocloud-config
     ports:
       - "8761:8761"
   ocloud-gateway:
     image: ocloud/ocloud-gateway:1.0.0
+    external_links: 
+      - ocloud-config
+      - ocloud-discovery
     ports:
       - "8090:8090"
   ocloud-service:
     image: ocloud/ocloud-service:1.0.0
+    external_links: 
+      - ocloud-config
+      - ocloud-discovery
     ports:
       - "7030:7030"
   ocloud-app:
     image: ocloud/ocloud-app:1.0.0
+    external_links: 
+      - ocloud-config
+      - ocloud-discovery
     ports:
       - "7050:7050"
   ocloud-hystrix:
@@ -26,5 +37,7 @@ services:
       - "8051:8051"
   ocloud-gateway:
     image: ocloud/ocloud-turbine:1.0.0
+    external_links: 
+      - ocloud-discovery
     ports:
       - "8031:8031"
