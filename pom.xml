@@ -26,16 +26,13 @@
 		<relativePath />
 	</parent>
 	<modules>
-		<module>ocloud-app</module>
 		<module>ocloud-config</module>
 		<module>ocloud-discovery</module>
 		<module>ocloud-gateway</module>
-		<module>ocloud-hystrix</module>
-		<module>ocloud-monitor</module>
 		<module>ocloud-service</module>
-		<module>ocloud-generator</module>
-		<module>ocloud-api</module>
+		<module>ocloud-app</module>
 		<module>ocloud-turbine</module>
+		<module>ocloud-hystrix</module>
 	</modules>
 	<dependencies>
 		<dependency>
