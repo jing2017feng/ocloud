@@ -60,13 +60,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- 添加docker-maven插件 -->
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>1.2.0</version>
 				<configuration>
-					<imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
-					<dockerDirectory>src/main/docker</dockerDirectory>
+					<imageName>ocloud/${project.artifactId}:${project.version}</imageName>
+					<forceTags>true</forceTags>
+					<baseImage>java</baseImage>
+					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
@@ -75,15 +78,6 @@
 						</resource>
 					</resources>
 				</configuration>
-				<executions>
-					<execution>
-						<id>build-image</id>
-						<phase>package</phase>
-						<goals>
-							<goal>build</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>

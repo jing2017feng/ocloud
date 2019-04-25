@@ -17,16 +17,6 @@ logging:
   file: /log/ocloud-config.log
   level:
     root: INFO
-#服务注册发现中心
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://jingfeng:minghui@localhost:8761/eureka/
-  instance:
-    hostname: ocloud-config
-    appname: ocloud-config
-    metadata-map:
-      cluster: MAIN
 #健康监控
 management:
   endpoints:

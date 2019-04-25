@@ -1,0 +1,30 @@
+version: "3"
+services:
+  ocloud-config:
+    image: ocloud/ocloud-config:1.0.0
+    ports:
+      - "8771:8771"
+  ocloud-discovery:
+    image: ocloud/ocloud-discovery:1.0.0
+    ports:
+      - "8761:8761"
+  ocloud-gateway:
+    image: ocloud/ocloud-gateway:1.0.0
+    ports:
+      - "8090:8090"
+  ocloud-service:
+    image: ocloud/ocloud-service:1.0.0
+    ports:
+      - "7030:7030"
+  ocloud-app:
+    image: ocloud/ocloud-app:1.0.0
+    ports:
+      - "7050:7050"
+  ocloud-hystrix:
+    image: ocloud/ocloud-hystrix:1.0.0
+    ports:
+      - "8051:8051"
+  ocloud-gateway:
+    image: ocloud/ocloud-turbine:1.0.0
+    ports:
+      - "8031:8031"
