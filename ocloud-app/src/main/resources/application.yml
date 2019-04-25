@@ -12,3 +12,8 @@ eureka:
 feign:
   hystrix:
     enabled: true
+    
+#ribbon负载均衡策略
+ocloud-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

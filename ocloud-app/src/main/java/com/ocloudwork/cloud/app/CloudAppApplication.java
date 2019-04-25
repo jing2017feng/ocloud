@@ -14,13 +14,13 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-//@EnableCircuitBreaker
+@EnableCircuitBreaker
 //@EnableHystrix
 @EnableFeignClients
 public class CloudAppApplication {
 
 	/**
-	 * 定义restful接口调用模板对象
+	 * 定义restful接口调用模板对象，Ribbon调用方式使用
 	 * @return RestTemplate
 	 */
 	@Bean

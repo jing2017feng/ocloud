@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ocloudwork.cloud.app.entity.User;
 import com.ocloudwork.cloud.app.feign.UserFeignClient;
 
-@RequestMapping("/user")
+@RequestMapping("/feign")
 @RestController
-public class UserController {
+public class UserFeignController {
   @Autowired
   private UserFeignClient userFeignClient;
 
