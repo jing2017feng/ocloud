@@ -1,11 +1,10 @@
-version: "3"
+version: "3.1"
 services:
   peer1:
     image: ocloud/ocloud-discovery:1.0.0
     ports:
       - "8761:8761"
     environment:
-      - spring.cloud.profile=docker
       - spring.profiles.active=peer1
   peer2:
     image: ocloud/ocloud-discovery:1.0.0
@@ -13,7 +12,6 @@ services:
     ports:
       - "8762:8762"
     environment:
-      - spring.cloud.profile=docker
       - spring.profiles.active=peer2
   ocloud-gateway:
     image: ocloud/ocloud-gateway:1.0.0
@@ -24,23 +22,17 @@ services:
       - "8090:8090"
   ocloud-service:
     image: ocloud/ocloud-service:1.0.0
-    environment:
-      - spring.cloud.profile=docker
     ports:
       - "7030:7030"
   ocloud-app:
     image: ocloud/ocloud-app:1.0.0
-    environment:
-      - spring.cloud.profile=docker
     ports:
       - "7050:7050"
   ocloud-hystrix:
     image: ocloud/ocloud-hystrix:1.0.0
     ports:
       - "8051:8051"
-  ocloud-gateway:
+  ocloud-turbine:
     image: ocloud/ocloud-turbine:1.0.0
-    environment:
-      - spring.cloud.profile=docker
     ports:
       - "8031:8031"
