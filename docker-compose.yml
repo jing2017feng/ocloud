@@ -2,8 +2,6 @@ version: "3.1"
 services:
   peer1:
     image: ocloud/ocloud-discovery:1.0.0
-    links:
-      - peer2
     ports:
       - "8761:8761"
     environment:
@@ -11,8 +9,6 @@ services:
   peer2:
     image: ocloud/ocloud-discovery:1.0.0
     hostname: peer2
-    links:
-      - peer1
     ports:
       - "8762:8762"
     environment:
