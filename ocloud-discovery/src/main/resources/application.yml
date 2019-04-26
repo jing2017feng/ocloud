@@ -1,10 +1,6 @@
 spring:
   application:
     name: ocloud-discovery
-  security:
-    user:
-      name: jingfeng
-      password: minghui
 ---
 spring:
   profiles: peer1                                 # 指定profile=peer1
@@ -16,7 +12,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://peer2:8762/eureka/      # 将自己注册到peer2这个Eureka上面去
-
 ---
 spring:
   profiles: peer2
