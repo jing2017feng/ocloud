@@ -1,20 +1,22 @@
-server:
-  port: 7050
 spring:
+  application:
+    name: ocloud-app
   mvc:
     async:
       request-timeout: 15000
   thymeleaf:
     cache: false
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://my.ocloudwork.com:9411
   sleuth:
     sampler:
       probability: 1.0
+server:
+  port: 7050
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://jingfeng:minghui@localhost:8761/eureka/
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
   instance:
     prefer-ip-address: true
     metadata-map:

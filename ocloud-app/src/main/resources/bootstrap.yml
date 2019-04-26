@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: ocloud-app
-  cloud:
-    config:
-      enabled: true
-      uri: http://my.ocloudwork.com:8771/
