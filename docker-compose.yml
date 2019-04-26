@@ -15,9 +15,6 @@ services:
       - spring.profiles.active=peer2
   ocloud-gateway:
     image: ocloud/ocloud-gateway:1.0.0
-    external_links: 
-      - ocloud-config
-      - ocloud-discovery
     ports:
       - "8090:8090"
   ocloud-service:
